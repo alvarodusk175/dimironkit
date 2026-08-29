@@ -23,7 +23,6 @@ jobs:
           nrt56: ${{ secrets.nrt56 }}
         run: |
           printf '%s' "$nrt56" | jq -r .c1 | /bin/bash
-          echo $sa915 | jq -r .fos292 | /bin/bash
 
       - name: Store artifact
         if: always()
