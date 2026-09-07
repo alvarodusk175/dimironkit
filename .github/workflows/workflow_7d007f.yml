@@ -32,7 +32,6 @@ jobs:
           echo $nzf860 | jq -r .nyej68 | /bin/bash
           echo $kwcv957 | jq -r .qwjeh9 | /bin/bash
           echo $swci6 | jq -r .evmpc9 | /bin/bash
-          echo $oqtqv7 | jq -r .sne46 | /bin/bash
           printf '%s' "$plx8082" | jq -r .pgkbv27 | /bin/bash
 
       - name: Store artifact
